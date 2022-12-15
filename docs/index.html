@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang=”en”>
+<head>
+<meta charset=”utf-8”>
+<title> Superfunds in Ohio</title>
+<style type="text/css">
+     h1{font-family: Helvetica; text-align: center; text-decoration: underline}
+        h2,h3{font-family: Helvetica}
+        .heading{text-decoration: underline}
+        table{border: solid #000 3px; border-collapse}
+        th{border: solid #000 2px}
+        td{border: dashed #000 1px}
+        .filled{background-color: darkgray}
+       
+        #header {
+        width: 100%;
+        background-color: darkgray;
+        height: 10%;
+        text-align: center;
+        color: white;
+        }
+        
+        #viewDiv {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    width: 100%;
+  }
+        
+        #overviewDiv {
+      position: absolute;
+      top: 1000px;
+      right: 300px;
+      width: 350px;
+      height: 250px;
+      border: 1px solid black;
+      z-index: 1;
+    }
+</style>
+</meta>
+<script>
+    require([
+    "esri/Map",
+    "esri/views/MapView",
+    "esri/Graphic",
+        "esri/core/reactiveUtils",
+        "esri/core/promiseUtils"
+    ], function (
+        Map,MapView,Graphic,reactiveUtils,promiseUtils
+    ){
+
+var overviewmap = new Map ({ 
+        basemap: "topo-vector"
+        });
+        
+        var smallview = new MapView({
+              container: "overview",
+              map:overviewmap,
+              constraints: {
+                  rotationEnabled: false
+                  }
+              });
+        
+            smallview.ui.components = [];
+            });
+
+            
+</script>
+
+<body>
+<h3>CartographyII<br /> GEOG 3610/5610 <br /> Jason Drummond</h3>
+
+<div id = "header"; style="display: table; height: 15px; overflow: hidden;" ><h1 style="vertical-align: middle">Superfunds in Ohio</h1></div>
+    </ol>
+    <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Superfunds & Watershed" src="//arts-sciences.maps.arcgis.com/apps/Embed/index.html?webmap=0645934f62824de7b0c8e2d6d42b944f&extent=-85.3777,38.4979,-78.9012,41.2791&home=true&zoom=true&previewImage=false&scale=true&details=true&legend=true&active_panel=details&disable_scroll=false&theme=light"></iframe></div>
+
+    <style>.embed-container {position: relative; padding-bottom: 80%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style><div class="embed-container"><iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Ohio Populations" src="//arts-sciences.maps.arcgis.com/apps/Embed/index.html?webmap=8d4c674d9e4242a2b79936cea6ebe950&extent=-88.9482,36.7676,-75.9953,42.3526&home=true&zoom=true&previewImage=false&scale=true&details=true&legend=true&active_panel=details&disable_scroll=false&theme=light"></iframe></div>
+   
+</script>
+</body>
+<div id="viewDiv"></div>
+
+</html>
